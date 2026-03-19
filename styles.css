@@ -48,7 +48,9 @@ main {
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	gap: 64px;
+	padding: 48px;
 }
 
 section {
@@ -61,7 +63,46 @@ section {
 form {
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 16px;
+}
+
+input[type="number"] {
+	padding: 8px 12px;
+	font-family: inherit;
+	font-size: 1rem;
+	border: 2px solid currentColor;
+	border-radius: 4px;
+	background: transparent;
+	color: inherit;
+	width: 100%;
+}
+
+.error {
+	color: tomato;
+	font-size: 0.85rem;
+	min-height: 1.2em;
+}
+
+#log-section {
+	min-width: 280px;
+	align-items: flex-start;
+}
+
+#log-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+}
+
+#log-list li {
+	padding: 8px 12px;
+	border-radius: 4px;
+	border: 2px solid currentColor;
+	font-size: 0.9rem;
 }
 
 .light-on {
@@ -72,4 +113,14 @@ form {
 .light-off {
 	background-color: var(--body-light-off);
 	color: var(--text-light-off);
+}
+
+.bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: -1;
+	
 }

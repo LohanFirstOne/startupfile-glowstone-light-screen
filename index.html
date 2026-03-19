@@ -7,18 +7,28 @@
 		<title>Health Checker</title>
 	</head>
 	<body class="light-off">
+		<div class="bg"></div>
 		<dialog id="menu">
-			<form method="dialog">
+			<form id="light-form" method="dialog" novalidate>
 				<h3>Turn <code id="menu-code-status">ON</code> Light ?</h3>
-				<input id="inpRg" type="range" min="1" max="100">
+				<label for="brightness">Brightness (1 - 100)</label>
+				<input
+					id="caca"
+					type="range"
+					name="inprg"
+					class="inpRg"
+					min="1"
+					max="100"
+				/>
+				<span id="brightness-error" class="error"></span>
 				<button type="submit">
 					<h5>Turn <span id="menu-span-status">ON</span> Light</h5>
 				</button>
 			</form>
 		</dialog>
 		<main>
-			<section>
-				<h1>Light Your Screen !</h1>
+			<section id="light-section">
+				<h1 class="h1">Light Your Screen !</h1>
 				<img
 					id="glowstone"
 					src="assets/glowstone-off.webp"
@@ -27,6 +37,10 @@
 				<button id="light">
 					<h2>Switch Light</h2>
 				</button>
+			</section>
+			<section id="log-section">
+				<h2 class="h2">Action Log</h2>
+				<ul id="log-list"></ul>
 			</section>
 		</main>
 		<script src="app.js"></script>
