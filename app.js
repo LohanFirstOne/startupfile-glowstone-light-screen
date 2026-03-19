@@ -59,6 +59,7 @@ $form.addEventListener("submit", (e) => {
 
 	$textcolor1.style.color = textinvertcolor($divbg);
 	$textcolor2.style.color = textinvertcolor($divbg);
+	ul.style.color = textinvertcolor($divbg)
 	//-----------------------------!-----------------------------\\
 });
 
